@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">Christian Jaffe A. A.</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#selected-work">Portfolio</a></li>
+                <li><a href="#technical-skills">Skills</a></li>
+                <li><a href="#work-experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero-section">
+        <div class="hero-text-content">
+            <h1>Christian Jaffe Alarcón Acosta</h1>
+            <p class="hero-title">Data Science and Mathematics Engineering</p>
+            <div class="hero-about-me-text">
+                <p>Enthusiastic, motivated student bringing hands-on ML and visualization experience. Determined problem-solver, adaptable team player, eager to tackle challenges and grow professionally.</p>
+            </div>
+            <div class="hero-buttons">
+                <a href="#selected-work" class="cta-button">View My Projects</a>
+                <a href="#contact" class="cta-button secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="hero-profile-container">
+            <div class="profile-image">
+                <img src="imagenes/christian.jpeg" alt="Foto de Christian Jaffe Alarcón Acosta">
+            </div>
+            <div class="technology-label top-left">Snowflake</div>
+            <div class="technology-label top-right">Python</div>
+            <div class="technology-label bottom-left">ML</div>
+            <div class="technology-label bottom">AI</div>
+            <div class="technology-label right">SQL</div>
+        </div>
+    </section>
+
+    <main>
+        <section id="selected-work" class="portfolio-section dark-bg">
+            <div class="section-title-container">
+                <span class="section-number">01.</span>
+                <h2>Selected Work</h2>
+                <p class="section-subtitle">A showcase of my technical projects and applications</p>
+            </div>
+            <div class="work-grid">
+
+                <div class="project-container">
+                    <input type="checkbox" id="project1-trigger" class="modal-trigger">
+                    <div class="project-card">
+                        <img src="imagenes/proyecto1.png" alt="Time Series Forecasting with LSTM">
+                        <div class="card-content">
+                            <h3>Time Series Forecasting with LSTM</h3>
+                            <p>Development of a predictive model using an LSTM neural network to forecast daily hotel occupancy.</p>
+                            <div class="tags"><span>Python</span><span>LSTM</span><span>Azure</span><span>Streamlit</span></div>
+                            <label for="project1-trigger" class="view-project-link">View Project &rarr;</label>
+                        </div>
+                    </div>
+                    <div class="modal-container">
+                        <div class="modal-content">
+                            <label for="project1-trigger" class="close-button">&times;</label>
+                            <h2>Time Series Forecasting with LSTM</h2>
+                            <p class="modal-date">January 2024 - June 2024</p>
+                            <img src="imagenes/proyecto1.png" alt="Time Series Forecasting with LSTM" class="modal-image">
+                            <div class="modal-body">
+                                <p>This project focused on developing a forecasting model to estimate daily hotel room occupancy for the company TCA Software Solutions. The objective was to enable more dynamic price management and better resource planning.</p>
+                                <h4>Key Metrics & Results:</h4>
+                                <ul>
+                                    <li>An **LSTM (Long-Short Term Memory)** neural network model was implemented due to its high capacity to capture temporal patterns and dependencies.</li>
+                                    <li>The **Mean Absolute Error (MAE)** was reduced to **32.86** when using 90% of the data for training.</li>
+                                    <li>Automated pipelines were used with **Kedro** for data preprocessing, model training, and deployment.</li>
+                                    <li>The final solution, including an interactive dashboard built with **Streamlit**, was deployed on **Azure** using **Docker**.</li>
+                                </ul>
+                            </div>
+                            <a href="https://github.com/CastroMaster10/TCA_App_theLastDance" class="cta-button" target="_blank">View Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-container">
+                    <input type="checkbox" id="project2-trigger" class="modal-trigger">
+                    <div class="project-card">
+                        <img src="imagenes/proyecto2.png" alt="Natural Language Interpreter for Classification">
+                        <div class="card-content">
+                            <h3>Natural Language Interpreter for Classification</h3>
+                            <p>Design of an unsupervised learning model to automatically classify free-text failure reports for Ternium.</p>
+                            <div class="tags"><span>NLP</span><span>Python</span><span>TF-IDF</span><span>NMF</span></div>
+                            <label for="project2-trigger" class="view-project-link">View Project &rarr;</label>
+                        </div>
+                    </div>
+                    <div class="modal-container">
+                        <div class="modal-content">
+                            <label for="project2-trigger" class="close-button">&times;</label>
+                            <h2>Natural Language Interpreter for Classification</h2>
+                            <p class="modal-date">March 2023</p>
+                            <img src="imagenes/proyecto2.png" alt="Natural Language Interpreter for Classification" class="modal-image">
+                            <div class="modal-body">
+                                <p>For the company Ternium, an NLP solution was developed to address the challenge of analyzing thousands of machinery failure reports written in free-text format, which had inconsistencies, errors, and non-standardized terminology.</p>
+                                <h4>Methodology & Results:</h4>
+                                <ul>
+                                    <li>An unsupervised learning model was applied, as there was no previously classified data.</li>
+                                    <li>Natural Language Processing (NLP) techniques were used to clean and standardize the text, including the NLTK library and regular expressions (Regex).</li>
+                                    <li>The text was transformed into numerical vectors using the **TF-IDF** algorithm to measure the importance of words in the reports.</li>
+                                    <li>**NMF (Non-negative Matrix Factorization)** was used to reduce dimensionality and group the reports into thematic clusters, identifying the most common types of failures.</li>
+                                    <li>The final model successfully identified **11 distinct groups** or types of failures, allowing Ternium to better understand the root causes of operational problems and optimize their maintenance processes.</li>
+                                </ul>
+                            </div>
+                            <a href="https://github.com/ChristianJaffe/Natural-Language-Interpreter-for-Classification" class="cta-button" target="_blank">View Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-container">
+                    <input type="checkbox" id="project3-trigger" class="modal-trigger">
+                    <div class="project-card">
+                        <img src="imagenes/proyecto3.png" alt="Gravitational Wave Detection using TDA">
+                        <div class="card-content">
+                            <h3>Gravitational Wave Detection using TDA</h3>
+                            <p>Using Topological Data Analysis (TDA) to classify gravitational wave signals, offering an efficient alternative to deep learning.</p>
+                            <div class="tags"><span>TDA</span><span>Python</span><span>Giotto-tda</span><span>Scikit-learn</span></div>
+                            <label for="project3-trigger" class="view-project-link">View Project &rarr;</label>
+                        </div>
+                    </div>
+                    <div class="modal-container">
+                        <div class="modal-content">
+                            <label for="project3-trigger" class="close-button">&times;</label>
+                            <h2>Gravitational Wave Detection using TDA</h2>
+                            <p class="modal-date">Academic Project</p>
+                            <img src="imagenes/proyecto3.png" alt="Gravitational Wave Detection using TDA" class="modal-image">
+                            <div class="modal-body">
+                                <p>This project explores the use of Topological Data Analysis (TDA) as a novel and computationally efficient method to detect the presence of gravitational waves in time series with high background noise.</p>
+                                <h4>Methodology & Results:</h4>
+                                <ul>
+                                    <li>10,000 synthetic signals were generated, some with embedded gravitational waves and others with pure noise, to train and evaluate the model.</li>
+                                    <li>**Takens' Embedding** was applied to reconstruct the dynamics of the signals in a higher-dimensional space, followed by **Principal Component Analysis (PCA)** for dimensionality reduction.</li>
+                                    <li>Using the **giotto-tda** library, **persistent homology** diagrams were calculated to extract the topological features of each signal.</li>
+                                    <li>Finally, a **Logistic Regression** classifier was trained with the extracted topological features, achieving an **Accuracy of 0.777** and an Area Under the Curve **(AUC) of 0.85**.</li>
+                                </ul>
+                            </div>
+                            <a href="https://github.com/ChristianJaffe/Detecting-Gravitional-Waves-Using-Topological-algorithms" class="cta-button" target="_blank">View Repository</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-container">
+                    <input type="checkbox" id="project4-trigger" class="modal-trigger">
+                    <div class="project-card">
+                        <img src="imagenes/proyecto4.png" alt="Tour Route Optimization for Tourists">
+                        <div class="card-content">
+                            <h3>Tour Route Optimization for Tourists</h3>
+                            <p>Mathematical model based on the Orienteering Problem with Time Windows (OPTW) to generate optimal tourist itineraries.</p>
+                            <div class="tags"><span>Mathematical Optimization</span><span>OPTW</span><span>GAMS</span><span>Route Planning</span></div>
+                            <label for="project4-trigger" class="view-project-link">View Project &rarr;</label>
+                        </div>
+                    </div>
+                    <div class="modal-container">
+                        <div class="modal-content">
+                            <label for="project4-trigger" class="close-button">&times;</label>
+                            <h2>Tour Route Optimization for Tourists</h2>
+                            <p class="modal-date">June 2023</p>
+                            <img src="imagenes/proyecto4.png" alt="Tour Route Optimization for Tourists" class="modal-image">
+                            <div class="modal-body">
+                                <p>This project focused on solving the tourist route planning problem to maximize traveler satisfaction, subject to time and budget constraints. It was applied to a case study in the city of Puebla, Mexico.</p>
+                                <h4>Methodology & Results:</h4>
+                                <ul>
+                                    <li>The problem was modeled as a variant of the **Orienteering Problem with Time Windows (OPTW)**, ideal for situations where the reward (satisfaction) is more important than visiting all nodes.</li>
+                                    <li>The **GAMS (General Algebraic Modeling System)** software, a high-level tool for mathematical modeling and optimization, was used.</li>
+                                    <li>The model considers parameters such as place ratings (satisfaction), opening and closing times, entry costs, and travel times for each point of interest.</li>
+                                    <li>Optimal routes were successfully generated for different scenarios (7, 12, and 17 locations), demonstrating the model's ability to maximize the total satisfaction score without exceeding the tourist's time or budget.</li>
+                                </ul>
+                            </div>
+                            <a href="https://github.com/ChristianJaffe/Tour-Route-Optimization-for-Tourists" class="cta-button" target="_blank">View Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-container">
+                    <input type="checkbox" id="project5-trigger" class="modal-trigger">
+                    <div class="project-card">
+                        <img src="imagenes/proyecto5.png" alt="Air Quality Analysis in Nuevo León">
+                        <div class="card-content">
+                            <h3>Air Quality Analysis in Nuevo León</h3>
+                            <p>Multivariate statistical analysis of air quality, using Factor Analysis and Discriminant Analysis to build a predictive classification model.</p>
+                            <div class="tags"><span>Multivariate Analysis</span><span>Factor Analysis</span><span>LDA</span><span>R Studio</span></div>
+                            <label for="project5-trigger" class="view-project-link">View Project &rarr;</label>
+                        </div>
+                    </div>
+                    <div class="modal-container">
+                        <div class="modal-content">
+                            <label for="project5-trigger" class="close-button">&times;</label>
+                            <h2>Air Quality Analysis in Nuevo León</h2>
+                            <p class="modal-date">September 2023</p>
+                            <img src="imagenes/proyecto5.png" alt="Air Quality Analysis in Nuevo León" class="modal-image">
+                            <div class="modal-body">
+                                <p>This project, in collaboration with the Integrated Environmental Monitoring System (SIMA), focuses on understanding the complex factors affecting air quality in Monterrey, Nuevo León, and developing a model to predict its status.</p>
+                                <h4>Methodology & Results:</h4>
+                                <ul>
+                                    <li>**Factor Analysis** was used to reduce the dimensionality of 16 variables (pollutants and meteorological), identifying 4 key latent factors that explain 64% of the data's variability.</li>
+                                    <li>The identified factors were: Meteorological Variables, Atmospheric Pollutants, Climatological Factors, and Time (seasons/hours).</li>
+                                    <li>A **Linear Discriminant Analysis (LDA)** model was built using these factors to classify air quality into 5 categories (Good, Acceptable, Poor, etc.).</li>
+                                    <li>The final classifier achieved a **70% accuracy**, proving to be an effective tool for prediction and potential public health decision-making. The analysis environment was **R Studio**.</li>
+                                </ul>
+                            </div>
+                            <a href="https://github.com/ChristianJaffe/Analisis-del-Aire-Nuevo-Leon" class="cta-button" target="_blank">View Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-container">
+                    <input type="checkbox" id="project6-trigger" class="modal-trigger">
+                    <div class="project-card">
+                        <img src="imagenes/proyecto6.png" alt="Image Classification with CNN vs. CapsNet">
+                        <div class="card-content">
+                            <h3>Image Classification with CNN vs. CapsNet</h3>
+                            <p>Implementation and comparison of two deep learning models to classify images from the Fashion MNIST dataset.</p>
+                            <div class="tags"><span>Deep Learning</span><span>Python</span><span>TensorFlow</span><span>CapsNet</span></div>
+                            <label for="project6-trigger" class="view-project-link">View Project &rarr;</label>
+                        </div>
+                    </div>
+                    <div class="modal-container">
+                        <div class="modal-content">
+                            <label for="project6-trigger" class="close-button">&times;</label>
+                            <h2>Image Classification with CNN vs. CapsNet</h2>
+                            <p class="modal-date">September 2023</p>
+                            <img src="imagenes/proyecto6.png" alt="Image Classification with CNN vs. CapsNet" class="modal-image">
+                            <div class="modal-body">
+                                <p>This project involved the implementation and comparative evaluation of two neural network architectures for image classification, using the well-known Fashion MNIST dataset.</p>
+                                <h4>Models & Results:</h4>
+                                <ul>
+                                    <li><strong>Model 1 (CNN):</strong> A standard Convolutional Neural Network was built, achieving an accuracy of **92.25%**.</li>
+                                    <li><strong>Model 2 (CapsNet):</strong> A more novel architecture, a Capsule Network, was implemented, which obtained an accuracy of **88.25%** but with a significantly lower average loss (0.096%) and much faster training time (10 min vs. 1 hour).</li>
+                                    <li>The project's conclusion was that **CapsNet proved to be the better overall model** due to its excellent balance of accuracy, low loss, and computational efficiency.</li>
+                                </ul>
+                            </div>
+                            <a href="https://github.com/ChristianJaffe/Image-Classification-with-CNN-vs.-CapsNet" class="cta-button" target="_blank">View Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="technical-skills" class="skills-section dark-bg">
+            <div class="section-title-container">
+                <span class="section-number">02.</span>
+                <h2>Technical Skills</h2>
+                <p class="section-subtitle">Technologies and skills I've mastered throughout my journey</p>
+            </div>
+            <div class="skills-categories">
+                <div class="skill-category"><h4>Programming</h4><ul><li>Python</li><li>R</li><li>SQL</li><li>Java</li></ul></div>
+                <div class="skill-category"><h4>Data Manipulation</h4><ul><li>Pandas</li><li>NumPy</li><li>Excel</li></ul></div>
+                <div class="skill-category"><h4>ML (Machine Learning)</h4><ul><li>Scikit-learn</li><li>TensorFlow</li><li>Keras</li><li>PyTorch</li></ul></div>
+                <div class="skill-category"><h4>Data Visualization</h4><ul><li>Matplotlib</li><li>Seaborn</li><li>Tableau</li><li>Power BI</li></ul></div>
+                <div class="skill-category"><h4>Big Data</h4><ul><li>Azure</li><li>AWS</li><li>Spark</li></ul></div>
+                <div class="skill-category"><h4>Database Management</h4><ul><li>MySQL</li></ul></div>
+                <div class="skill-category"><h4>Tools</h4><ul><li>Git</li><li>Jupyter Notebooks</li><li>Docker</li></ul></div>
+                <div class="skill-category"><h4>Knowledge</h4><ul><li>Mathematics</li><li>Statistics</li><li>Business Acumen</li></ul></div>
+            </div>
+        </section>
+
+        <section id="work-experience" class="experience-section dark-bg">
+            <div class="section-title-container">
+                <span class="section-number">03.</span>
+                <h2>Work Experience</h2>
+                <p class="section-subtitle">Professional journey and accomplishments</p>
+            </div>
+            <div class="experience-timeline">
+                <div class="experience-item"><div class="experience-date-range"><p>Apr 2025 - Present</p></div><div class="experience-details-container"><div class="experience-details"><h5>Mobile & AI Application Developer</h5><p class="company-location">BETER APP (Internship) | Mérida, Yucatán, México - Remote</p><ul><li>Development of Web functionalities, database management, and data analysis.</li></ul></div></div></div>
+                <div class="experience-item"><div class="experience-date-range"><p>Oct 2023 - Present</p></div><div class="experience-details-container"><div class="experience-details"><h5>Data Analyst</h5><p class="company-location">CEMEX Ventures | Monterrey, N.L</p><ul><li>Lead the design and implementation of a customized copilot agent for CEMEX Ventures.</li><li>Develop Power BI reports tailored to diverse business needs, aligning with CEMEX's design standards and desired user experience.</li></ul></div></div></div>
+                <div class="experience-item"><div class="experience-date-range"><p>Oct 2023 - Dec 2023</p></div><div class="experience-details-container"><div class="experience-details"><h5>Data Scientist</h5><p class="company-location">AXTEL | Monterrey, N.L</p><ul><li>Creation and implementation of different Machine Learning models with Python to analyze the CHURN rate in the company.</li></ul></div></div></div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-cta-section">
+            <h2>Let's Build Something Together</h2>
+            <p class="contact-subtitle">I'm open to job opportunities, collaborations, and interesting projects. Feel free to reach out!</p>
+            <div class="contact-buttons">
+                <a href="mailto:christianalarconacosta@hotmail.com" class="cta-button contact-main-button">Contact Me</a>
+                <a href="CV_Christian_Alarcon.pdf" class="cta-button contact-secondary-button" target="_blank" download>Download CV</a>
+            </div>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/christianjaffeaa" target="_blank" aria-label="LinkedIn" class="social-icon">
+                    <img src="imagenes/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/ChristianJaffe" target="_blank" aria-label="GitHub" class="social-icon">
+                    <img src="imagenes/github.png" alt="GitHub">
+                </a>
+                <a href="mailto:christianalarconacosta@hotmail.com" aria-label="Email" class="social-icon">
+                    <img src="imagenes/email.png" alt="Email">
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Christian Jaffe Alarcón Acosta. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
